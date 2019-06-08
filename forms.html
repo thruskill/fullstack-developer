@@ -10,19 +10,54 @@
     </head>
     <body>
         <h2>Fill Your Details</h2>
-        <form action="" method="GET">
+        <form  name="My Form"action="" method="GET" enctype="UTF-8" autocomplete="on">
+            <fieldset>
+                <legend>My Data</legend>
 
-            Name:<input type="text" name="name" value="Name" required><br/><br/>
+            Name:<input type="text" name="name" value="" palceholder="Name"  required><br/><br/>
 
             Email:  <input type="mail" name="email" placeholder="EMAIL" required><br/><br/>
 
             Password:<input type="password" name="passwords" maxlength="4" minlength="2" required><br/><br/>
 
-            mobile:<input type="Number" name="mobile"  maxlength="10" required><br/><br/>
+            mobile:<input type="number" name="mobile" max="10" required><br/><br/>
 
             DOB:<input  type="date" name="dob" required><br/><br/>
+            
+            Gender:<input type="radio" name="Gender" value="male" checked >male
+
+            <input type="radio"  name="Gender"value="female">female<br/><br/>
+
+            List of courses:<input type="checkbox" name="courses" value="HTML">HTML
+
+            <input type="checkbox" name="courses" value="CSS">CSS
+
+            <input type="checkbox" name="courses" value="Javascript">Javascript<br/>
+
+            Gender:<select>
+                <option>None</option>
+
+             <option>Male</option>
+             <option>Female</option>
+             <option>Others</option>   
+            </select><br/><br/>
+
+            comment:
+            <textarea rows="4" column="5">
+
+            </textarea><br/>
+
+            <input type="color" name="mycolor"><br/><br/>
+            URL:<input type="url"  name="myurl" required><br/>
+            Date:<input type="date" name="date"><br/>
+            Month:<input type="month" name="month"><br/>
+            Date&Time:<input type="datetime" name="datetime">
+
+
+            </fieldset><br/><br/>
 
             <input type="submit" value="submit">
+            <input type="reset" value="clear" disabled>
 
         </form>
 
