@@ -7,12 +7,19 @@
         <title>
             Forms
         </title>
+        
     </head>
-    <body>
+    <!-- body section -->
+    <body style='background:aqua' >
+
+        <!-- heading to the form -->
         <h2>Fill Your Details</h2>
-        <form  name="My Form"action="" method="GET" enctype="UTF-8" autocomplete="on">
-            <fieldset>
-                <legend>My Data</legend>
+        <marquee behavior="scroll"scrollamount="5"direction="right"bgcolor="#0000FF"height="30px">Application Form </marquee><br/><br/>
+        <!-- form  is created using form tag -->
+        <form  name="My Form"action="" method="GET" enctype="UTF-8" autocomplete="on" align="center">
+            <!-- fieldset is used to provid border and styles to the form -->
+            <fieldset align="center" style='border:5px double #0fff0f;border-radius:20px'>
+                <legend style='color:blueviolet'><strong>My Data</strong></legend>
 
             Name:<input type="text" name="name" value="" palceholder="Name"  required><br/><br/>
 
@@ -20,7 +27,7 @@
 
             Password:<input type="password" name="passwords" maxlength="4" minlength="2" required><br/><br/>
 
-            mobile:<input type="number" name="mobile" max="10" required><br/><br/>
+            Contact:<input type="text" maxlength="10" pattern="\d{10}" title="limit is 10 numbers"  required /><br/><br/>
 
             DOB:<input  type="date" name="dob" required><br/><br/>
             
@@ -48,10 +55,14 @@
             </textarea><br/>
 
             <input type="color" name="mycolor"><br/><br/>
-            URL:<input type="url"  name="myurl" required><br/>
-            Date:<input type="date" name="date"><br/>
-            Month:<input type="month" name="month"><br/>
-            Date&Time:<input type="datetime" name="datetime">
+
+            URL:<input type="url"  name="myurl" required><br/><br/>
+
+            Date:<input type="date" name="date"><br/><br/>
+
+            Month:<input type="month" name="month"><br/><br/>
+
+            Date&Time:<input type="datetime" name="datetime"><br/>
 
 
             </fieldset><br/><br/>
