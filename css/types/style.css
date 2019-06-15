@@ -1,0 +1,17 @@
+h2{
+    color:#FF00FF;
+}
+/* class */
+.secondHead{
+    color:greenyellow;
+    
+}
+/* another class to same element */
+.bg{
+    background-color:black;
+}
+/* id selector */
+#head{
+    font-style: italic;
+    color:blue;
+}
