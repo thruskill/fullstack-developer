@@ -1,11 +1,12 @@
-## FullStack Development
-
+# fullstack-developer
+Learning MERN Repository
 ### Topics
 
 * HTML5
 * CSS3
-* Javascript
-* Node JS
-* Express JS
-* MongoDB
-* React JS
+* BOOTSTRAP
+* JAVASCRIPT
+* NODE JS
+* EXPRESS JS
+* MONGO DB
+* REACT JS

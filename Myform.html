@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Myform
+        </title>
+
+    </head>
+    <body align="center">
+        <h1>MY FORM</h1>
+        <form action="login.html" method="POST" align="center" enctype="application/x-www-form-urlencoded">
+
+            <fieldset>
+                <legend align="center"> <strong>MyData</strong></legend>
+                Name:<input type="name" value="" placeholder="Enter Name" required><br/><br/>
+                Email:<input type="email" placeholder="Email" required><br/><br/>
+                Password:<input type="password" placeholder="password"  maxlength=" 6" required><br/><br/>
+                Comment:<textarea rows="4" columns="5">
+
+                </textarea><br/><br/>
+                Joining Date:<input type="date" value="date" required><br/>
+                Gender:<input type="radio" value="male" name="Gender" checked>male
+                <input type="radio" value="female"name="Gender">female
+                <input type="radio" value="others" name="Gender">others<br/>
+                <br/>
+                Batch Type:<select>
+                    <option>week-days</option>
+                    <option>week-on</option>
+                </select><br/><br/>
+                List of courses:<select>
+                    <option>NONE</option>
+                    <option>HTML</option>
+                    <option>CSS</option>
+                    <option>AWS</option>
+                    <option>JAVASCRIPT</option>
+                    <option>FULLSTACK-DEVELOPER</option>
+        
+                </select><br/><br/>
+                <ul style='list-style-type:square'>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JAVASCRIPT</li>
+                </ul>
+                <br/>
+                Hobbies:
+                <ol type="1" reversed>
+                    <li>cricket</li>
+                    <li>movies</li>
+                </ol>
+
+
+
+            </fieldset><br/>
+            <input type="submit" value="submit">
+            <input type="reset" value="clear">
+
+        </form>
+    </body>
+</html>
