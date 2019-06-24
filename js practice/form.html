@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>form func</title>
+        <style>
+                *{
+
+                    
+                    background:thistle;
+                    font-family: Arial, Helvetica, sans-serif;
+                 
+                }
+                h1{
+                    font-family:cursive;
+
+                }
+                #loginform {
+                        width: 100%;
+                        padding: 12px 20px;
+                        margin: 8px 0;
+                        box-sizing: border-box;
+                        
+                        
+                        
+                        
+                        }
+            
+
+            </style>
+           <!-- internal  script -->
+           <script type="text/javascript">
+           function user1()
+           {
+                var user = document.getElementById("first");
+                var pass = document.getElementById("second");
+                if(user.value.trim() =="" )                {
+                    alert("Username should not be empty");
+                    user.style.border="solid 1px #ff0000";
+                    document.getElementById("labeluser").style.visibility="visible";
+                    return  false;
+                }
+                else if(pass.value.trim() =="")
+
+                {
+                    alert("Password should not be empty")
+                    return false;
+                }
+                else if(pass.value.trim().length<=8)
+
+                {
+                    alert("Password should be more than 8 characters")
+                    return false;
+
+                }
+                else
+                {
+            
+                    return true;
+
+                }
+                
+
+                
+
+           }
+
+           </script>
+           
+        
+      
+    </head>
+    <body align='center'>
+        <h1><strong>My Creation</strong></h1>
+
+
+        <fieldset style ='width:200px'>
+            <legend align="center">My Form</legend>
+    
+        <form  id="login_form" align='center'onsubmit=" return user1()" action ="message.html" method="POST">
+
+            Username:<input id="first" type="text" placeholder="username">
+            <label id="labeluser" style='color:red;visibility: hidden'>invalid username</label>
+            <br/><br/>
+            Password:<input id="second" type="password" placeholder="password" onkeypress="checkCaps(event)" autocomplete="off">
+            <br/><br/>
+        
+            <button id ="bt" type="submit">submit</button>
+            <br/>
+            <a href="" >Register</a>
+
+
+        </form>
+    </fieldset>
+   
+    </body>
+</html>
