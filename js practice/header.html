@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Header</title>
+        <style>
+            /* it is a universal selector */
+            *{
+                box-sizing: border-box;
+            }
+            /* changing the font family to body */
+            body{
+                font-family:Georgia, 'Times New Roman', Times, serif;
+                            }
+            /* styling the header */
+            .abc{
+                background-color: rgb(238, 254, 255);              
+                padding: 1px;
+                text-align: center;
+
+                font-size: 40px;
+                color:#0f220f;
+            }
+            /* Create two columns/boxes that floats next to each other */
+            nav {
+                float: left;
+                width: 19%;
+                height: 350px; /* only for demonstration, should be removed */
+                background:#0e1330;
+                padding: 10px;
+            }
+            /* Style the list inside the menu */
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+            }
+            article {
+                float: left;
+                padding: 20px;
+                width: 75%;
+                background-color: #f1f1f1;
+                height: 300px; /* only for demonstration, should be removed */
+            }
+            /* Clear floats after the columns */
+            section:after {
+                content: "";
+                display: table;
+                 clear: both;
+                }
+
+            /* Style the footer */
+            footer {
+                background-color: #777;
+                padding: 10px;
+                text-align: center;
+                color: white;
+                }
+                img{
+                    
+                }
+
+            
+            
+            
+        </style>
+
+    </head>
+    <body>
+        <header class="abc">
+            <h1>India</h1>
+            
+        </header>
+        <slection>
+                <nav>
+                    <ul>
+                            <li><a href="india">About</a></li>
+                    </ul>
+                    
+                </nav>
+            
+        
+        <article>
+                <h2>India</h2>
+                <p>
+                India (ISO: Bhārat), also known as the Republic of India (ISO: Bhārat Gaṇarājya),[19][e] is a country in South Asia. It is the seventh-largest country by area, the second-most populous country, and the most populous democracy in the world. Bounded by the Indian Ocean on the south, the Arabian Sea on the southwest, and the Bay of Bengal on the southeast, it shares land borders with Pakistan to the west;[f] China, Nepal, and Bhutan to the northeast; and Bangladesh and Myanmar to the east. In the Indian Ocean, India is in the vicinity of Sri Lanka and the Maldives; its Andaman and Nicobar Islands share a maritime border with Thailand and Indonesia.</p>
+            
+        </article>
+        </slection>
+        
+        <footer>
+            <p>@hotmail.com by shabeer  bhaiya</p>
+        </footer>
+
+    </body>
+</html>
