@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta  name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>javascript calculator</title>
+        <style>
+        </style>
+    </head>
+    <body>
+        <h1>javascript calculator</h1>
+        <!-- calculator body -->
+        <div id ="calbody">
+            <form id="lcdform">
+                <input id="lcdsu" name="lcdsu" type="text" value="0">
+                <input id="lcdu" name="lcdu" type="text" value="0">
+
+            </form>
+            <!-- number system -->
+            <div>
+               
+
+            <button id="num1" onclick="numone()">1</button>
+            <button id="num2" onclick="numtwo()">2</button>
+            <button id="num3" onclick="numthree()">3</button>
+            <button id="plus" onclick="plusoperation()">+</button>
+            <button id="minus" onclick="minusoperation()">-</button>
+
+            <button id="num4" onclick="numfour()">4</button>
+            <button id="num5" onclick="numfive()">5</button>
+            <button id="num6" onclick="numsix()">6</button>
+            <button id="multiplication" onclick="multioperation()">*</button>
+            <button id="modulo" onclick="modulodivision()">%</button>
+
+            <button id="num7"  onclick="numseven()">7</button>
+            <button id="num8" onclick="numeight()">8</button>
+            <button id="num9" onclick="numnine()">9</button>
+            <button id="division" onclick="divioperation()">/</button>
+            <button id="sqrt" onclick="sqrtoperation()">sqrt()</button>
+
+            <button id="num0" onclick="numzero()">0</button>
+            <button id="num00"  onclick="numzeroo()">00</button>
+            <button id="clear" onclick="clear()">clr</button>
+            <button id="equal" onclick="equals()">=</button><br/>
+            
+
+            </div>
+        </div>
+        <!-- javascript code for functioning the calculations -->
+        <script>
+            var firstnumber;
+            var secondnumber;
+            var results;
+            var operations;
+
+            function numone(){
+                if(document.lcdform.lcds.value =="0" || document.lcdform.lcds.value ==result)
+                {
+                    document.lcdform.lcds.value="1";
+
+                }
+                else 
+                {
+                    documentdocument.lcdform.lcds.value=documnt.lcdform.lcds.value+"1";
+                }
+            }
+
+            function numtwo(){
+                if(document.lcdform.lcds.value=="0"|| document.lcdform.lcds.value==result){
+                    document.lcdform.lcds.value="2";
+                }
+                else{
+                    documentdocument.lcdform.lcds.value=document.lcdform.lcds.value+"2";
+                }
+            }
+            function numthree(){
+                if(document.lcdform.lcds.value=="0"||document.lcdform.lcds.value==result)
+                {
+                    document.lcdform.lcds.value="3";
+                }
+                else{
+                    documentdocument.lcdform.lcds.value=document.lcdform.lcds.value+"3";
+                }
+            }
+            function numfour(){
+                if(document.lcdform.lcds.value=="0"||document.lcdform.lcds.value==result)
+                {
+                    document.lcdform.lcds.value="4";
+                }
+                else{
+                    documentdocument.lcdform.lcds.value=document.lcdform.lcds.value+"4";
+                                    }
+            }
+            function numfive(){
+                if(document.lcdform.lcds.value=="0"||document.lcdform.lcds.value==result)
+                {
+                    document.lcdform.lcds.value="5";
+
+                }
+                else{
+                    documentdocument.lcdform.lcds.value=document.lcdform.lcds.value+"5";
+                }
+            }
+            function numsix(){
+                if(document.lcdform.lcds.value=="0"||document.lcdform.lcds.value==result){
+                    document.lcdform.lcds.value="6";
+
+                }
+                else{
+                    documentdocument.lcdform.lcds.value=document.lcdform.lcds.value+"6";
+                }
+
+            }
+            function numseven(){
+                if(document.lcdform.lcds.value=="0"||document.lcdform.lcds.value==result){
+                    document.lcdform.lcds.value="7";
+                }
+                else{
+                    documentdocument.lcdform.lcds.value=document.lcdform.lcds.value+"7";
+                }
+            }
+            function numeight(){
+                if(document.lcdform.lcds.value=="0"||document.lcdform.lcds.value==result){
+                    document.lcdform.lcds.value="8";
+
+                }
+                else{
+                    documentdocument.lcdform.lcds.value=document.lcdform.lcds.value+"8";
+
+                }
+            }
+            function numnine(){
+                if(document.lcdform.lcds.value=="0"||document.lcdform.lcds.value==result){
+                    document.lcdform.lcds.value="9";
+                }
+                else{
+                    documentdocument.lcdform.lcds.value=document.lcdform.lcds.value+"9";
+                }
+            }
+            function numzero(){
+                if(document.lcdform.lcds.value=="0"){
+                    document.lcdform.lcds.value="0";
+                }
+                else if(document.lcdform.lcds.value==result){
+                    document.lcdform.lcds.value="0";
+                }
+                else{
+                    documentdocument.lcdform.lcds.value=document.lcdform.lcds.value+"0";
+                }
+            }
+            function numzeroo(){
+                if(document.lcdform.lcds.value=="0"||document.lcdform.lcds.value==result)
+                {
+                    return;                    
+                }
+                else{
+                    documentdocument.lcdform.lcds.value=document.lcdform.lcds.value +"00";
+                }
+            }
+            function clear(){
+                document.lcdform.lcds.value="0";
+                document.lcdform.lcdsu.value="";
+                return;
+               }
+            //    functions for arithmetic operations
+            function plusoperation()
+            {
+                operation="+";
+                firstnumber = parseInt(document.lcdform.lcds.value);
+                document.lcdform.lcds.value="0";
+                document.lcdform.lcdsu.value = firstnumber +  operation;
+                
+            }
+            function minusoperator()
+            {
+                operation  = "-";
+                firstnumber =  parseInt(document.lcdform.lcds.value);
+                document.lcdform.lcds.value = "0";
+                document.lcdform.lcdsu.value = firstnumber + operation;
+            }
+            function multioperation()
+            {
+                operation = "*";
+                firstnumber = parseInt(document.lcdform.lcds.value);
+                document.lcdform.lcds.value  =  "0";
+                document.lcdform.lcdsu.value = firstnumber + operation;
+
+
+            }
+            function divioperation()
+            {
+                operation = "/";
+                firstnumber = parseInt(document.lcdform.lcds.value);
+                document.lcdform.lcds.value = "0";
+                document.lcdform.lcdsu.value = firstnumber + operation;
+            }
+            function modulodivision()
+            {
+                operation =  "%";
+                firstnumber = parseInt(document.lcdform.lcds.value);
+                document.lcdform.lcds.value = "0";
+                document.lcdform.lcdsu.value = firstnumber + operation;
+
+            }
+            function equals()
+            {
+                operation = "=";
+            }
+            
+        </script>
+
+
+    </body>
+</html>

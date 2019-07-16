@@ -1,0 +1,1 @@
+var temp=document.getElementsByClassName('h1')[0].setAttribute('style','font-size:20px' );
