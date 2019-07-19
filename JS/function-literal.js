@@ -11,6 +11,7 @@ var add = function(a,b){
 console.log(add(2,3));
 
 
+
 // using cases of anonymous function
 
 // 1.self-executing function
