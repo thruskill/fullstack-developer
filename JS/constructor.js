@@ -36,7 +36,7 @@ console.log(obj2.constructor.prototype);
 
 
 // Array is constructor  function
-var arr = [];
+/*var arr = [];
 
 var arr2 = new Array();
 
@@ -69,7 +69,55 @@ console.log(arr2);
 
 console.log(arr.add());
 
+// Array object print the values 
+
 var newArr = new Array(1,2,3,4);
 
 console.log(newArr.add());
-// console.log(arr1.constructor);
+
+// console.log(arr1.constructor);*/
+
+// when give single element it will return the empty and length.
+
+/*var p = new Array(5);
+
+console.log(p);*/
+
+
+// push
+var array = [1,2,3,4,5,6];
+
+console.log(array);
+ 
+array.push(7);
+
+console.log(array);
+
+// shift
+array.shift();
+console.log(array);
+
+// slice
+
+console.log(array);
+
+var sliced = array.slice(2,3);
+
+console.log(sliced);
+
+// splice
+
+
+array.splice(1,3,'a','b','c');
+
+console.log(array);
+
+// sort
+
+
+
+// join
+
+var names =['v','a','l','l','a','b'];
+
+console.log(names.join(''));

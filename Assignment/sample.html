@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        
+        function  celci(){
+            celcius= document.myfrom.getElementById("cel");
+            fahrenheit=document.myform.getElementById("far");
+            if(celcius!==null){
+                f = (1.8*celcius)+32;
+                console.log("fahrenheit is  :",f);
+
+            }
+            else if(fahrenheit!==null){
+                c = (fahrenheit-32)*9/5;
+                console.log("celcius value is:",c);
+            }
+            else{
+                return "Enter The Number";
+            }
+        }
+        
+    </script>
+
+</head>
+<body>
+    <!-- <h1>check console</h1> -->
+    <h1>Converting celcius to fahrenheit</h1>
+    <form name='myform' action=""></form>
+
+    celcius: <input type="text" placeholder="enter number" id="cel" ><br/><br/>
+
+    fahrenheit :<input type="text" placeholder="enter number" id="far"><br/><br/>
+
+    <input type="submit" name="submit" onclick="celci"><br/><br/>
+
+    </form>
+
+        <!-- <script src="celciusvsfarheit.js"></script> -->
+</body>
+</html>
