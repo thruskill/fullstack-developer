@@ -109,15 +109,22 @@ const inventors = [
 
 // fat-arrow
 
-let totalYear =inventors.reduce((initial,ele) =>initial+(ele.passed-ele.year),0);
+// let totalYear =inventors.reduce((initial,ele) =>initial+(ele.passed-ele.year),0);
 
-console.log(totalYear);
+// console.log(totalYear);
 
 // or
 
-function cb(init,ele){
-    return init +(ele.passed - ele.year);
-}
-let year = inventors.reduce(cb,0);
+// function cb(init,ele){
+//     return init +(ele.passed - ele.year);
+// }
+// let year = inventors.reduce(cb,0);
 
-console.log(year);
+// console.log(year);
+
+// forEach();
+
+inventors.forEach(function(ele,index,arr){
+    console.log(ele);
+})
+

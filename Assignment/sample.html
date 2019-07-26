@@ -5,40 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script>
-        
-        function  celci(){
-            celcius= document.myfrom.getElementById("cel");
-            fahrenheit=document.myform.getElementById("far");
-            if(celcius!==null){
-                f = (1.8*celcius)+32;
-                console.log("fahrenheit is  :",f);
-
-            }
-            else if(fahrenheit!==null){
-                c = (fahrenheit-32)*9/5;
-                console.log("celcius value is:",c);
-            }
-            else{
-                return "Enter The Number";
-            }
-        }
-        
-    </script>
+   
 
 </head>
 <body>
     <!-- <h1>check console</h1> -->
     <h1>Converting celcius to fahrenheit</h1>
-    <form name='myform' action=""></form>
+    <form name='myform' action="">
 
     celcius: <input type="text" placeholder="enter number" id="cel" ><br/><br/>
 
     fahrenheit :<input type="text" placeholder="enter number" id="far"><br/><br/>
 
-    <input type="submit" name="submit" onclick="celci"><br/><br/>
+    <input type="button" id="btn" name="submit" value="submit"><br/><br/>
 
     </form>
+
+    <script>
+        
+        function  celci(e){
+            e.preventDefault();
+            var celcius= Number(document.getElementById("cel").value)
+            var fahrenheit= Number(document.getElementById("far").value);
+            if(celcius){
+               var f = (1.8*celcius)+32;
+                console.log("fahrenheit is  :",f);
+
+            }
+            else if(fahrenheit){
+               var c = (fahrenheit-32)*9/5;
+                console.log("celcius value is:",c);
+            }else {
+                console.log('Pass a value')
+            }
+        
+        }
+        let btn = document.getElementById('btn');
+        btn.addEventListener('click', celci)
+
+    </script>
 
         <!-- <script src="celciusvsfarheit.js"></script> -->
 </body>
