@@ -121,7 +121,7 @@ console.log(newStr);
 
 // lastIndexOf();
 
-console.log(parseInt(0xF,16));
+console.log(sent.lastIndexOf('f'));
 
 // slice();
 
