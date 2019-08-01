@@ -40,7 +40,7 @@ console.log(thirdEle);
 
 // spread and REST operator
 
-let max =Math.max(...array); //spread operator have three dots.
+let max =Math.max(...array); //spread operator has three dots.
 
 console.log(max);
 
