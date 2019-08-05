@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event-object</title>
+</head>
+<body>
+    <h1>Event Object</h1>
+    <a href='https://www.isongs.download/naa/?link=aHR0cDovL3M5Lm5hYXNvbmdzLmRvd25sb2FkL3Rlc2kxMzZramU2a2hleC9EZWFyJTIwQ29tcmFkZSUyMC0lMjAoMjAxOSkvW2lTb25ncy5pbmZvXSUyMDA1JTIwLSUyMENvbXJhZGUlMjBBbnRoZW0ubXAz'>click me to  play song</a>
+
+    <script>
+        let anc = document.querySelector('a');
+        let audio = document.createElement('audio');
+        document.body.appendChild(audio);
+
+    function playSound(e){
+        e.preventDefault();
+
+        audio.src = anc.href;
+
+        audio.controls =true;
+
+        audio.play();
+
+        // console.log(anc.href);
+
+        consoloe.log('clicked');
+    }
+    </script>
+
+</body>
+</html>
