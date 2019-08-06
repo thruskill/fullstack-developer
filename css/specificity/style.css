@@ -8,17 +8,36 @@ inline css=>1000
 
 */
 
-
-
-
-p{
-    color:blue;
+*{
+    color:orange;
 }
+
+
+
+/* by tag name */
+h2{
+        color:black;
+}
+
+
+/* p{ 
+    color:blue;
+    font-weight:300;
+}*/
+
+
+
+/* by id name */
 #main{
     color:rgb(255, 136, 0);
 }
-.para{
+
+
+
+/* by class name */
+/* .para{ 
     font-style: italic;
     background-color:gainsboro;
     color:red;
-}
+    font-weight:300;
+}*/
