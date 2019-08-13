@@ -3,7 +3,7 @@ function walkDOM(n){
     do{
     console.log(n);
         if(n.hasChildNodes()){
-            walkDOM(n.firstElementChild);
+            walkDOM(n.firstChild);
         }
 
     }while(n = n.nextSibiling)
