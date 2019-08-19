@@ -1,4 +1,5 @@
 let xhr = new XMLHttpRequest();
+// console.log(xhr);
 
 function handleData() {
 
@@ -7,17 +8,24 @@ function handleData() {
     }
     // httpstatuses.com  for http messages
     if(xhr.status !=200){
-        return;
+        console.log("File not found by server");
     }
 
     console.log(JSON.parse(xhr.responseText));
 
+    let data = JSON.parse(xhr.responseText);
 
-}
+    // let p = document.querySelector('P');
 
-xhr.onreadystatechange=handleData;
+    // p.innerText = data.title;
+
+    // document.body.appendChild();
+
+} 
+
+xhr.onreadystatechange = handleData;
 // website for  free api for testing
-xhr.open('GET','https://jsonplaceholder.typicode.com/todos/1',true);
+xhr.open('GET','https://jsonplaceholder.typicode.com/albums',true);
 
 
 xhr.send('');

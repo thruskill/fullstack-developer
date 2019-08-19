@@ -1,4 +1,4 @@
-
+ 
 let subBtn = document.querySelector('button');
 
 let inpt = document.querySelector('input');

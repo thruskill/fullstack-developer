@@ -74,8 +74,6 @@ Object.keys(imgs).forEach(function(ele,i,arr){
 xhr.onreadystatechange = handler;
 
 xhr.open('GET', 'https://api.giphy.com/v1/gifs/translate?api_key=LybTHK41QPUe8sVJMQqjnDrdBWymyLZN&s=jhon wick='+value,true);
-
-
 xhr.send('');
 
 }
