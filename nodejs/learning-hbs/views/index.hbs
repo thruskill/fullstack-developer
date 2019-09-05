@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Learning hbs</title>
+</head>
+<body>
+    {{ > header}}
+
+    
+    <h1>Handlebars</h1>
+{{!-- to  dispaly  normal string  value double  curly brace --}}
+    <h2>Welcome {{ name }}</h2>
+{{!-- to display html --}}
+    {{{ fulName }}}
+
+    <h3>Product  Description</h3>
+        <p><b>Name</b>:{{product.name}}</p>
+        <p><b>Price</b>:{{product.price}}</p>
+        <p><b>Rating</b>:{{product.rating}}</p>
+
+        <h3>hobbies</h3>
+
+        <ul>
+            
+            {{#each hobbies}}
+                <li>{{this}}</li>
+            {{/each}}
+        </ul>
+
+
+        <p>Access using index: {{ hobbies.[1] }}</p>
+
+        {{#if userName}}
+            <p>Welcome{{userName}}</p>
+        {{else}}
+            <p>Enter user name</p>
+        {{/if}}
+
+
+
+</body>
+</html>
