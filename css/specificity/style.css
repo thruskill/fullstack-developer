@@ -1,8 +1,12 @@
 /* selectors */
 /* universal selctor=>0 
+
 class selector=>100
-element selector=>10
+
+element or typed selector=>10
+
 id selector=>500
+
 inline css=>1000
 
 
@@ -15,8 +19,13 @@ inline css=>1000
 
 
 /* by tag name */
-h2{
+.head{
         color:black;
+}
+
+
+#myHead{
+    color:greenyellow;
 }
 
 

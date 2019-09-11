@@ -7,7 +7,7 @@ cb('pass a number',null);
     }
 }
 
-square(12,function(err,data){
+square('12',function(err,data){
     if(err){
         console.log(err);
 

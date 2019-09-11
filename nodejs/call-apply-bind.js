@@ -61,7 +61,7 @@ description.call(fruit2,'js');
 description.apply(fruit3, ['vallab']);
 
 // bind();
-// BIND won't execute function but returns the with the context provided.
+// BIND won't execute function but return  with the context provided.
 
 
 let des = description.bind(fruit,['mandeep']);

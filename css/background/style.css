@@ -1,0 +1,11 @@
+.para{
+    background-color:burlywood;
+}
+
+div{
+    color:wheat;
+    background-image: url('../../media/image/sunset.jpg');
+    /* background-repeat:no-repeat; *//* if image is small  repeat-x repeat-y round*/
+    /* background-position:center; */
+    
+}

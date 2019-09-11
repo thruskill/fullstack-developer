@@ -1,8 +1,51 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
+    /* font-family: 'Dancing Script', cursive; */
 
 }
 h1{
     font-size:30px;
     font-weight:300;
+}
+
+.para{
+    font-size: 20px;
+    font-style:italic;
+
+    font-variant:normal;
+
+    line-height:30px;
+
+    word-spacing:10px;
+
+    /* letter-spacing: 5px; */
+
+    text-indent:30px;
+
+
+    /* underline line-through */
+    text-decoration:none;
+    text-align:justify;/*center right left justify*/
+    
+}
+
+.mypara{
+    text-align:justify;
+}
+
+
+h3{
+
+    /* solid dashed dotted */
+    /* border:1px solid darkcyan; */
+
+
+
+    border-bottom:3px solid gold;
+
+    border-top:3px solid orange;
+
+    border-right: 3px solid green;
+
+    border-left:3px solid red;
 }
