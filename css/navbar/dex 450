@@ -1,0 +1,327 @@
+//DateTime d = System.now();
+//System.debug(d);
+
+List<Integer> intList = new List<Integer>();
+intList.add(10);
+intList.add(10);
+intList.add(20);
+intList.add(30);
+intList.add(10);
+
+system.debug(intList);
+
+for(Integer x: intList){
+    system.debug(x);
+}
+
+Set<Integer> intList1 = new Set<Integer>();
+intList1.add(10);
+intList1.add(40);
+intList1.add(20);
+intList1.add(30);
+intList1.add(10);
+
+intList1.
+
+system.debug(intList1);
+
+for(Integer x: intList1){
+    system.debug(x);
+}
+
+Map<String,String> addressMap = new Map<String,String>();
+addressMap.put('Street','Royality');
+addressMap.put('City','Bangalore');
+addressMap.put('Zipcode','500638');
+addressMap.put('Zipcode','500608');
+addressMap.put(null,'500608');
+addressMap.put(null,null);
+if(addressMap.containsKey('zipcode')){
+    String element =addressMap.get('zipcode');
+        system.debug(element);
+}
+
+System.debug(addressMap);
+
+Set<String> keys=addressMap.keySet();
+List<String> values=addressMap.values();
+System.debug(keys);
+System.debug(values);
+
+//Create 1000 account records;
+
+List<Account> accList=new List<Account>();
+for(Integer i=1;i<=1000;i++){
+    
+    Account acc=new Account();
+    acc.Name='Demo Account'+i;
+    acc.Type='Partner';
+    /*try{
+         insert acc;
+    }
+    Catch(Exception e){
+        system.debug(e);
+    } */
+   // insert acc;
+   accList.add(acc);
+    
+}
+insert accList;
+
+//soql
+//return types
+//1.list of records
+
+List<Contact> conList=[select firstname,lastname from contact];
+
+for(Contact con:conList){
+    system.debug(con.id+'::'+con.firstname+'::'+con.phone);
+}
+
+//2.Returns a single record
+Contact con=[select firstname,lastname from Contact where title='Buyer'];
+system.debug(con.id+'::'+con.firstname);
+
+List<Contact> con=[select firstname,lastname from Contact where title='Buyer' Limit 1];
+if(con.isEmpty()){
+    system.debug('no records found');
+}else{
+for(Contact c:con){
+system.debug(c.id+'::'+c.firstname);
+}
+}
+
+//3.Returns Integer
+Integer CountAcc=[select Count()
+                 from Account];
+system.debug(CountAcc);
+
+//Fetch name and type of accounts from CA and NY states
+
+List<Account> acclist=[select name,type
+                      from Account
+                      where BillingState In('NY','CA')];
+for(Account a:acclist){
+    System.debug(a.name+'::'+a.type);
+}
+
+
+//Find the count of all accounts starting with Demo
+Integer acc=[select count() from Account
+            where name like 'Demo%'];
+system.debug(acc);
+
+//Delete all accounts starting with Demo
+List<Account> accList=[select id,name from Account where name like 'Demo%'];
+    delete accList;
+
+//Fetch names of all accounts icluding the ones from recyclebin
+List<Account> accList=[select name from Account All Rows];
+for(Account a:acclist){
+    System.debug(a.name);
+}
+
+//Fetch only account records from recycle bin
+Integer count=[select count()
+              from Account
+              where IsDeleted=true
+              All Rows];/// to lock the records we will use [for update]
+System.debug(count);
+
+//Undelete records from recyclebin
+List<Account> accList=[select id,name from Account where IsDeleted=true All Rows];
+undelete accList;
+
+//SOSL
+List<List<sObject>> records = [FIND 'ACME*'
+                              	Returning Account(Name,type,phone),
+                               			  Opportunity(Name,StageName)];
+/*for(List<sObject> s:records){
+    system.debug(s);
+}*/
+List<Account> acc=records[0];
+for(Account a:acc){
+    system.debug(a);
+}
+system.debug('below are contacts');
+
+List<Opportunity> con=records[1];
+for(Opportunity c:con){
+    system.debug(c);
+}
+
+
+List<List<sObject>> records = [FIND 'ACME*'
+                              	Returning Account,
+                               			  Opportunity];
+/*for(List<sObject> s:records){
+    system.debug(s);
+}*/
+List<Account> acc=records[0];
+for(Account a:acc){
+    system.debug(a);
+}
+system.debug('below are contacts');
+
+List<Opportunity> con=records[1];
+for(Opportunity c:con){
+    system.debug(c);
+}
+
+//Joins
+//Left outer - fetch Position Names along with associated Job Application Names
+
+List<Position__c> pos=[select Name from Position__c];
+for(Position__c p:pos){
+    System.debug(p);
+}
+
+List<Position__c> pos=[select Name,Department__C,(Select Name,Stage__c from job_Applications__r) from Position__c];
+for(Position__c p:pos){
+    System.debug(p.Name+':::::'+p.Department__C);
+    for(Job_Application__c jobApp : p.job_Applications__r){
+        System.debug(jobApp.Name+':::::'+jobApp.Stage__c);
+    }
+}
+
+//Right-outer join
+//fetch JobApplication Names along with Associated Position Details
+List<Job_Application__c> jobAppList=[select name,Stage__c,Position__r.name,Position__r.Department__C 
+                                     from Job_Application__c];
+for(Job_Application__c jobApp :jobAppList){
+    System.debug(jobApp.Name+'......'+jobApp.Stage__c+'......'+jobApp.Position__r.Name+'....'+jobApp.Position__r.Department__C);
+}
+
+//associated records of job applications and positions
+List<job_Application__c> joblist=[select name
+                                 from Job_Application__c
+                                 where Position__c!=null];
+for(job_Application__c j:joblist){
+    System.debug(j.name);
+}
+////
+List<job_Application__c> joblist=[select name
+                                 from Job_Application__c
+                                 where Position__c=null];
+for(job_Application__c j:joblist){
+    System.debug(j.name);
+}
+
+//Display Position Names who have associated Job Applications
+List<Position__c> posList=[select Name
+                          From Position__c
+                          where Id In (select Position__c 
+                                      From Job_Application__c)];
+for(Position__c p:posList){
+    System.debug(p.name);
+}
+
+
+
+
+List<Account> ac=[select Name
+                 from Account];
+for(Account acc:ac){
+    System.debug(acc.Name);
+}
+
+Integer uq=Limits.getQueryLocatorRows();
+Integer lq=limits.getLimitQueryRows()-uq;
+System.debug('used:'+uq);
+System.debug('leftQueries:'+lq);
+
+//DML -Standalone vs Database
+//Standalone if there are any errors it will not save 
+Contact c1=new Contact(FirstName='rajesh',LastName='Kumar');
+Contact c2=new Contact(FirstName='Naresh');
+List<Contact> conList=new List<Contact>{c1,c2};
+    try
+{
+    insert conList;
+}Catch(DMLException e){
+    Error_Log__c log=new Error_Log__c();
+    log.Trace__c=e.getMessage();
+    insert log;
+}
+
+//Database
+Contact c1=new Contact(FirstName='rajesh',LastName='Kumar');
+Contact c2=new Contact(FirstName='Naresh');
+List<Contact> conList=new List<Contact>{c1,c2};
+List<Database.saveResult> srList=Database.insert(conList,false);
+for(Database.SaveResult sr:srList){
+    system.debug(sr);
+    if(sr.isSuccess()){
+        system.debug(sr.getId());
+    }else{
+        System.debug(sr.getErrors());
+        for(Database.Error de:sr.getErrors()){
+            System.debug(de.getFields()+'----'+de.getMessage()+'---'+de.getStatusCode());
+        }
+    }
+}
+
+///////
+List<sObject> sobj=new List<sObject>();
+sobj.add(new Account(Name='deepak khana'));
+sobj.add(new Contact(LastName='deepak khana'));
+sobj.add(new Contact(FirstName='deepak khana'));
+sobj.add(new Candidate__c(First_Name__c='deepak khana'));
+
+Database.insert(sobj,false);
+
+//////
+List<Account> acclist=[select Id,Type
+                      from Account where Name like 'Demo%'];
+for(Account acc:acclist){
+    acc.Type='Prospect';
+}
+update acclist;
+
+//////////////
+Integer Count=0;
+for(List<Account> acclist: [select Id,Type from Account where Name like 'Demo%']){
+                               for(Account acc:accList){
+                                   acc.Type='Prospect';
+                               }
+                               update accList;
+                               Count++;
+                           }
+System.debug('Counter Value:'+Count);
+
+
+///////////
+String x = 'This is a really cool test.';
+   while(x.hasNext()){
+      system.debug(x.next());
+   }
+//////
+Position__Share ps=new Position__Share();
+ps.ParentId='a053i000003wWOY';
+ps.userorGroupId='0053i0000027Bxp';
+ps.Accesslevel='Edit';
+ps.RowCause=Position__Share.RowCause.Approver__c;
+insert ps;
+
+
+
+
+
+
+
+///Batch Apex
+BatchClassExample bce=new BatchClassExample();
+Database.executeBatch(bce, 50);
+
+
+List<Position__Share> oldRecords=new List<Position__Share>();
+List<Position__c> pos=new List<Position__c>();
+Map<Id,Position__Share> oldMap;
+        for(Position__c p:pos){
+            Position__Share ps=new Position__Share();
+            Position__share oldRecord=oldMap.get(ps.Id);
+            oldRecords.add(oldRecord);
+        }
+        delete oldRecords;
+
+

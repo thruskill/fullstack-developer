@@ -1,0 +1,29 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+
+h1{
+    color:lightsalmon;
+}
+
+
+/* descendent selector */
+
+.outer h1{
+    color:limegreen;
+}
+
+/* target direct child of .outer */
+.outer > h1{
+    color:lightgray;
+}
+
+
+
+/* chaining */
+.main .innermain ul li a{
+    text-decoration: none;
+}

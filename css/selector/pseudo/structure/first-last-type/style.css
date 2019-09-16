@@ -1,0 +1,7 @@
+article p:first-of-type{
+    color:yellow;
+}
+
+article p:last-of-type{
+    color:green;
+}

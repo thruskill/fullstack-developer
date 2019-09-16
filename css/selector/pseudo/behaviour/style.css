@@ -1,0 +1,22 @@
+/* 
+    hover
+    active
+    visited
+
+*/
+
+
+
+a:hover{
+    color:white;;
+    background-color:rgb(255, 238, 0);
+
+}
+
+a:active{
+    color:limegreen;
+}
+
+a:visited{
+    color:salmon;
+}

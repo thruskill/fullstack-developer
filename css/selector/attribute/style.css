@@ -1,0 +1,36 @@
+
+
+
+
+h1[id]{
+    color:lightskyblue;
+}
+
+
+h2[class="head"]{
+    color:lightsalmon;
+}
+
+
+/* p[class="head"]{
+    color:darkorange;;
+} */
+
+p[class~="head"]{
+    color:darkorange;;
+}
+
+
+
+
+/* match ending characters */
+a[href$='pdf']{
+    text-decoration: none;
+    color:steelblue;
+}
+
+
+/* match starting characters */
+a[href^='https']{
+    color:goldenrod;
+}

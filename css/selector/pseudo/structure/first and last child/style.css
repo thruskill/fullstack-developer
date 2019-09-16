@@ -1,0 +1,15 @@
+
+
+*{
+    margin:0;
+    padding:0;
+    
+}
+
+.list li:first-child{
+    color:red;
+}
+
+.list li:last-child{
+    color:greenyellow;
+}

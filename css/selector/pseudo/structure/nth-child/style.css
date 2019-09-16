@@ -1,0 +1,12 @@
+/* .list li:nth-child(3){
+    color:pink;
+} */
+
+/* .list li:nth-child(odd){
+    color:violet;
+} */
+
+
+.list li:nth-child(2n+1){
+    color:red;
+}

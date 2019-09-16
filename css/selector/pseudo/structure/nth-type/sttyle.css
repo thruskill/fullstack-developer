@@ -1,0 +1,7 @@
+.outer p:nth-of-type(2){
+    color:blue;
+}
+
+.outer p:nth-of-type(even){
+    color:black;
+}
