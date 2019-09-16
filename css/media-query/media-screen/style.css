@@ -1,0 +1,53 @@
+/* media syntax 
+    @media  media-type and( media-features ){}
+
+    features
+    height
+    width,min-height
+    min-width,
+    margin-height
+    margin-width
+*/
+
+
+*{
+    padding: 0px;
+    margin:0px;
+    box-sizing:border-box;
+}
+
+header{
+    background-color: khaki;
+    align-content: center;
+    /* font-family: sans-serif; */
+    width:100%;
+}
+
+header h1{
+    text-align: center;
+    padding:20px 0;
+}
+
+.column{
+    width: 50%;
+    float:left;
+    padding:5px;
+
+}
+
+.columnn p{
+    text-align:justify;
+}
+
+@media screen and (max-width:600px){
+    .column{
+        width:100%;
+    }
+}
+
+
+@media all and (min-width:400px) and (max-width:800px){
+    header{
+        background-color: mediumblue;
+    }
+}

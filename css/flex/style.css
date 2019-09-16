@@ -1,0 +1,38 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+
+.container{
+    background-color: lightsalmon;
+    display:flex;
+   
+    flex-flow:row; /*column column-reverse row-reverse  */
+    flex-wrap: wrap-reverse;
+}
+
+.box{
+    flex-basis: 300px;
+    /* min-width:300px; */
+    height:200px;
+ 
+    flex-grow: 1;  /*  keep the boxes  in equal sizes */
+    /* flex-shrink: 1; */  
+}
+
+.one{
+    background-color: darkgreen;
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+}
+.two{
+    background-color: darkorange;
+    /* flex-grow: 2; */
+    /* flex-shrink: 2; */
+}
+.three{
+    background-color: dimgrey;
+    /* flex-grow: 3; */
+    /* flex-shrink: 3; */
+}
