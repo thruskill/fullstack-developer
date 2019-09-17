@@ -54,4 +54,19 @@ header ul.navbar > li.toggle-nav{
         display:block;
         float:right;
     }
+
+    header ul.navbar.responsive{
+        position:relative;
+    }
+
+    header ul.navbar.responsive li{
+        display:inline;
+        float:none;
+    }
+
+    header ul.navbar.responsive li.toggle-nav{
+        position:absolute;
+        top:0;
+        right:0;
+    }
 }
