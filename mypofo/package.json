@@ -1,0 +1,17 @@
+{
+  "name": "mypofo",
+  "version": "1.0.0",
+  "description": "mypofo application",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vallab",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "hbs": "^4.0.4"
+  }
+}
